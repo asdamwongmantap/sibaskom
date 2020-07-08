@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','Logincontroller@index');
 Route::post('/ceklogin','Logincontroller@ceklogin');
 Route::get('/logout','Logincontroller@logout');
+Route::post('/savetask','Taskcontroller@create');
 Route::group(['middleware' => 'auth'],function(){
     Route::get('/dashboard','Maincontroller@index');
+    //task
+    Route::get('/mytask','Taskcontroller@listtask');
+    Route::get('/addtask','Taskcontroller@addtask');
 });
