@@ -32,7 +32,7 @@
                <!-- <li><a href="/sibaskom/liststaff"><i class="fa fa-users"></i> List Staff </a></li> -->
                <li><a href="/sibaskom/listuser"><i class="fa fa-users"></i> List Pengguna </a></li>
                <h3>Task</h3>
-               <li><a href="/sibaskom/reportkirim"><i class="fa fa-list"></i> My Task </a></li>
+               <li><a href="/sibaskom/mytask"><i class="fa fa-list"></i> My Task </a></li>
               <h3>Others</h3>
               <li><a href="/sibaskom/logout"><i class="fa fa-sign-out"></i> Logout </a></li>
               

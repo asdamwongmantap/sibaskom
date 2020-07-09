@@ -38,24 +38,24 @@
 					</div>
 					
 					<div class="form-group">
-						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="task_additional_info1">No.Order 
+						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="labeltask_additional_info1" id="labeltask_additional_info1" style="display: block">No.Order 
 						</label>
 						<div class="col-md-6 col-sm-6 col-xs-12">
-						<input type="text" class="form-control col-md-7 col-xs-12" id="task_additional_info1" name="task_additional_info1" aria-describedby="task_additional_info1">
+						<input type="text" class="form-control col-md-7 col-xs-12" id="task_additional_info1" name="task_additional_info1" aria-describedby="task_additional_info1" style="display: block">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="task_additional_info2">Nama Produk 
+						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="task_additional_info2" style="display: block" id="labeltask_additional_info2">Nama Produk 
 						</label>
 						<div class="col-md-6 col-sm-6 col-xs-12">
-						<input type="text" class="form-control col-md-7 col-xs-12" id="task_additional_info2" name="task_additional_info2" aria-describedby="task_additional_info2">
+						<input type="text" class="form-control col-md-7 col-xs-12" id="task_additional_info2" name="task_additional_info2" aria-describedby="task_additional_info2" style="display: block">
 						</div>
                     </div>
                     <div class="form-group">
-						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="task_additional_info3">Nama Penerima 
+						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="task_additional_info3" style="display: block" id="labeltask_additional_info3">Nama Penerima 
 						</label>
 						<div class="col-md-6 col-sm-6 col-xs-12">
-						<input type="text" class="form-control col-md-7 col-xs-12" id="task_additional_info3" name="task_additional_info3" aria-describedby="task_additional_info3">
+						<input type="text" class="form-control col-md-7 col-xs-12" id="task_additional_info3" name="task_additional_info3" aria-describedby="task_additional_info3" style="display: block">
 						</div>
 					</div>
 						<input type="hidden" class="form-control col-md-7 col-xs-12" id="created_by" name="created_by" aria-describedby="created_by" value="{{auth()->user()->id}}">
@@ -84,6 +84,64 @@
         <!-- /page content -->
         @include('template/footermeta')
 		 <script type="text/javascript">
+			$('#task_cat').on('change',function(e) {
+				if (document.getElementById("task_cat").value == "1"){
+					document.getElementById("labeltask_additional_info1").style.display="block";
+					document.getElementById("task_additional_info1").style.display="block";
+					document.getElementById("labeltask_additional_info1").innerHTML="No.Order";
+
+					document.getElementById("labeltask_additional_info2").style.display="block";
+					document.getElementById("task_additional_info2").style.display="block";
+
+					document.getElementById("labeltask_additional_info3").style.display="block";
+					document.getElementById("task_additional_info3").style.display="block";
+				}else if (document.getElementById("task_cat").value == "2"){
+					document.getElementById("labeltask_additional_info1").style.display="block";
+					document.getElementById("task_additional_info1").style.display="block";
+					document.getElementById("labeltask_additional_info1").innerHTML="No.Order";
+
+					document.getElementById("labeltask_additional_info2").style.display="block";
+					document.getElementById("task_additional_info2").style.display="block";
+
+					document.getElementById("labeltask_additional_info3").style.display="block";
+					document.getElementById("task_additional_info3").style.display="block";
+				}else if (document.getElementById("task_cat").value == "3"){
+					document.getElementById("labeltask_additional_info1").style.display="block";
+					document.getElementById("task_additional_info1").style.display="block";
+					document.getElementById("labeltask_additional_info1").innerHTML="IG Siapa";
+
+					document.getElementById("labeltask_additional_info2").style.display="none";
+					document.getElementById("task_additional_info2").style.display="none";
+
+					document.getElementById("labeltask_additional_info3").style.display="none";
+					document.getElementById("task_additional_info3").style.display="none";
+				}else if (document.getElementById("task_cat").value == "4"){
+					document.getElementById("labeltask_additional_info1").style.display="block";
+					document.getElementById("task_additional_info1").style.display="block";
+					document.getElementById("labeltask_additional_info1").innerHTML="IG Siapa";
+
+					document.getElementById("labeltask_additional_info2").style.display="none";
+					document.getElementById("task_additional_info2").style.display="none";
+
+					document.getElementById("labeltask_additional_info3").style.display="none";
+					document.getElementById("task_additional_info3").style.display="none";
+				}else if (document.getElementById("task_cat").value == "5"){
+					document.getElementById("labeltask_additional_info1").style.display="block";
+					document.getElementById("task_additional_info1").style.display="block";
+					document.getElementById("labeltask_additional_info1").innerHTML="URL";
+
+					document.getElementById("labeltask_additional_info2").style.display="none";
+					document.getElementById("task_additional_info2").style.display="none";
+
+					document.getElementById("labeltask_additional_info3").style.display="none";
+					document.getElementById("task_additional_info3").style.display="none";
+				}
+				
+				// else{
+				// 	document.getElementById("labeltask_additional_info1").style.display="none";
+				// 	document.getElementById("task_additional_info1").style.display="none";
+				// }
+			});
 		$('#myDatepicker2').datetimepicker({
         		format: 'DD/MM/YYYY'
 			});
