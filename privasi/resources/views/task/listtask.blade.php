@@ -89,6 +89,7 @@
 						  
                           @if (auth()->user()->level == '1')
 							<td><a class="btn btn-success btnmodalitem" data-toggle="modal" data-target=".bs-example-modal-sm" data-taskid = "{{$task->task_id}}" data-taskcatid = "{{$task->task_cat}}">Confirm</a></td>
+							<td><a href="/sibaskom/detailpengiriman/{{$task->task_id}}" class="btn btn-primary">Detail</a></td>
 							@else
 							<td><a href="/sibaskom/detailpengiriman/{{$task->task_id}}" class="btn btn-primary">Detail</a></td>
 							@endif
